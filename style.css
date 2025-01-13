@@ -45,15 +45,15 @@ body {
   color: #000;
 }
 
-/* Main Content Sections */
-.section {
+/* Main Content */
+main {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.section h1,
-.section h2 {
+main h1,
+main h2 {
   margin-bottom: 1rem;
 }
 
