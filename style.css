@@ -14,7 +14,6 @@ html, body {
   font-family: Mandali, sans-serif;
   color: #333;
   background-color: #fff;
-
   display: flex;
   flex-direction: column;
 }
@@ -71,6 +70,16 @@ main h1,
 main h2 {
   margin-bottom: 1rem;
 }
+.linkedin-icon {
+  margin-left: 0.3rem;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.linkedin-icon:hover {
+  color: #005582;
+}
 
 /* Footer always at the bottom */
 footer {
@@ -79,6 +88,61 @@ footer {
   padding: 1rem;
   background-color: #f8f8f8;
   border-top: 1px solid #ddd;
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
+  font-family: 'Lilita One', sans-serif;
+}
+
+.page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: rgb(63, 63, 70);
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(63, 63, 70);
+}
+
+/* Hidden by default */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: rgb(63, 63, 70);
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.mobile-menu a:hover {
+  background-color: #EDEDEF;
+}
+
+.mobile-menu.show {
+  display: flex;
 }
 
 /* Responsiveness */
@@ -90,5 +154,41 @@ footer {
 
   main {
     padding: 1.5rem 1rem;
+  }
+}
+
+/* Show mobile nav and hide desktop nav on small screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+    background-color: #f8f8f86f;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .navbar ul li a {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Ensure the mobile-menu does not appear on larger screens */
+@media (min-width: 769px) {
+  .mobile-menu,
+  .mobile-nav {
+    display: none !important;
   }
 }

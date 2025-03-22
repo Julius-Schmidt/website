@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
+  <div class="mobile-nav">
+    <div class="page-title">Contact</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../">Home</a>
+    <a href="../AGBs/">AGBs</a>
+    <a href="../Privacy/">Privacy Policy</a>
+    <a href="../Contact/">Contact</a>
+  </div>
+
   <!-- Navigation Bar -->
   <nav class="navbar">
     <ul>
@@ -32,7 +44,14 @@
 
   <!-- Footer (Optional) -->
   <footer>
-    <p>&copy; 2025 Your Company Name</p>
+    <p>&copy; 2025 CAOS Network UG (haftungsbeschränkt)</p>
+    <p><a href="./Imprint/" style="color: black;">Imprint</a></p></p>
   </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>  
 </body>
 </html>
