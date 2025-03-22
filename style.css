@@ -1,44 +1,45 @@
-/* Basic Reset */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
+/* Reset & base layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: calc(14px + 0.5vw);
   font-family: Mandali, sans-serif;
   color: #333;
   background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lilita One', sans-serif;
+/* Ensure body grows but main fills remaining space */
+body {
+  min-height: 100vh;
 }
 
-/* Navigation Bar */
+/* Header / Navigation Bar */
 .navbar {
-  padding: 0.3rem;
+  width: 100%;
+  padding: 0.3rem 1rem;
   background-color: #f8f8f86f;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px; opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
   font-family: 'Lilita One', sans-serif;
 }
 
 .navbar ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   padding: 0;
-  margin: 0;
-}
-
-.navbar li {
   margin: 0;
 }
 
@@ -47,19 +48,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 1.5rem;
   text-decoration: none;
   color: rgb(63, 63, 70);
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
 .navbar a:hover,
 .navbar a.active {
   background-color: #EDEDEF;
-  border-radius: 8px;
 }
 
 /* Main Content */
 main {
-  flex: 1;
-  padding: 2rem;
+  flex: 1; /* This is key: allows main to expand and push footer to bottom */
+  width: 100%;
+  padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -69,11 +72,23 @@ main h2 {
   margin-bottom: 1rem;
 }
 
-/* Footer */
+/* Footer always at the bottom */
 footer {
+  width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   background-color: #f8f8f8;
-  margin-top: 2rem;
   border-top: 1px solid #ddd;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .navbar a {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
 }
