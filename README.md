@@ -1,3 +1,4 @@
 # website
 
-local: python3 -m http.server
+local: 
+python3 -m http.server
