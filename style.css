@@ -104,6 +104,18 @@ footer {
   font-family: 'Lilita One', sans-serif;
 }
 
+.hero-svg {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 5rem auto 3rem auto;
+  transform: scale(1.4);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+
 .page-title {
   position: absolute;
   left: 50%;
