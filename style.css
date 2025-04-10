@@ -104,16 +104,33 @@ footer {
   font-family: 'Lilita One', sans-serif;
 }
 
+/*
 .hero-svg {
   display: block;
   width: 100%;
   max-width: 1000px;
   height: auto;
-  margin: 5rem auto 3rem auto;
+  margin: 5rem auto 5rem auto;
   transform: scale(1.4);
   transform-origin: center;
   pointer-events: none;
 }
+*/
+
+.hero-svg-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 0;
+  overflow: hidden; /* prevent scrollbars if image overflows */
+}
+
+.hero-svg {
+  width: 180%;
+  max-width: 180%;
+  height: auto;
+  pointer-events: none;
+}
+
 
 
 .page-title {
